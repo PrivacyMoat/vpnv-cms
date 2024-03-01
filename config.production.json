@@ -30,7 +30,15 @@
     }
   },
   "logging": {
-    "transports": ["stdout"]
+    "path": "content/logs/",
+    "useLocalTime": true,
+    "level": "info",
+    "rotation": {
+      "enabled": true,
+      "count": 15,
+      "period": "1d"
+    },
+    "transports": ["stdout", "file"]
   },
   "paths": {
     "contentPath": "/var/lib/ghost/content"
