@@ -20,7 +20,6 @@
     "options": {
       "host": "smtp.postmarkapp.com",
       "port": 587,
-      "secure": true,
       "headers": {
         "X-PM-Message-Stream": "outbound"
       },
