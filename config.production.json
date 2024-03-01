@@ -15,12 +15,23 @@
     }
   },
   "mail": {
-    "transport": "Direct"
+    "from": "sayhello@vpnvision.com",
+    "transport": "SMTP",
+    "options": {
+      "host": "smtp.postmarkapp.com",
+      "port": 587,
+      "secure": true,
+      "headers": {
+        "X-PM-Message-Stream": "outbound"
+      },
+      "auth": {
+        "user": "mail__options__auth__user",
+        "pass": "mail__options__auth__pass"
+      }
+    }
   },
   "logging": {
-    "transports": [
-      "stdout"
-    ]
+    "transports": ["stdout"]
   },
   "paths": {
     "contentPath": "/var/lib/ghost/content"
